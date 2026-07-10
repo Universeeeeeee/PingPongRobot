@@ -1,0 +1,60 @@
+# macOS
+.DS_Store
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Conda environments should not be placed inside project, but ignore if present
+conda-meta/
+
+# Environment variables / secrets
+.env
+.env.*
+!.env.example
+
+# IDE / editor
+.vscode/
+.idea/
+
+# Test / cache
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Temporary / downloaded external repo
+.tmp_HOPE-PKU/
+
+# Logs
+*.log
+
+# Large/generated experiment outputs
+outputs/
+runs/
+checkpoints/
+weights/
+models/
+data/
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.bag
+*.npz
+*.npy
+*.csv
+*.jsonl

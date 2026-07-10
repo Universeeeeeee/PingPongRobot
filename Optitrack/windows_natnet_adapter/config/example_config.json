@@ -1,0 +1,24 @@
+{
+  "server_address": "192.168.1.10",
+  "local_address": "192.168.1.20",
+  "connection_type": "multicast",
+  "command_port": 1510,
+  "data_port": 1511,
+  "rigid_body_names": {
+    "table": "PPT",
+    "robot_base": "P1_base",
+    "ego_camera": "P1_head_camera"
+  },
+  "optional_rigid_bodies": ["ego_camera"],
+  "ball": {
+    "source": "unlabeled_marker",
+    "selection": "nearest_to_previous",
+    "max_jump_m": 0.8,
+    "validated_as_center": false
+  },
+  "output": {
+    "jsonl_path": "logs/session.jsonl",
+    "udp_localhost_port": 5511,
+    "enable_udp": false
+  }
+}
