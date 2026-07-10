@@ -58,3 +58,7 @@ data/
 *.npy
 *.csv
 *.jsonl
+
+# Local papers / notes not tracked
+July/
+June/
