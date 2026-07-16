@@ -1,0 +1,40 @@
+natnet:
+  server_ip: "192.168.50.1"
+  local_ip: "192.168.50.2"
+  command_port: 1510
+  data_port: 1511
+  connection_type: "unicast"
+  bitstream_version: [4, 1]
+
+ball:
+  source: natnet_rigid_body
+  rigid_body_name: "ball"
+
+table:
+  rigid_body_name: "table"
+
+robot:
+  source: motion_capture_tracking_named_pose
+  topic: "/motion_capture_tracking/poses"
+  rigid_body_name: "P1"
+  mocap_to_base_link_translation_m: [0.0, 0.0, 0.0]
+  mocap_to_base_link_quaternion_xyzw: [0.0, 0.0, 0.0, 1.0]
+
+stream:
+  publish_zmq: "tcp://*:5556"
+  output_pos_unit: "mm"
+  output_vel_unit: "mm/s"
+  quat_order_to_planner: "xyzw"
+
+coordinate:
+  source_frame: "hope_table"
+  R_planner_from_source:
+    - [1, 0, 0]
+    - [0, 1, 0]
+    - [0, 0, 1]
+  t_planner_from_source_m: [-1.37, 0.7625, 0.02]
+
+diagnostics:
+  log_jsonl: true
+  log_dir: "logs"
+  print_interval_s: 1.0
